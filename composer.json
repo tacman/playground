@@ -16,6 +16,7 @@
         "phpdocumentor/reflection-docblock": "^5.3",
         "phpstan/phpdoc-parser": "^1.5",
         "sensio/framework-extra-bundle": "^6.1",
+        "survos/base-bundle": "*@dev",
         "survos/maker-bundle": "*@dev",
         "symfony/asset": "6.1.*",
         "symfony/console": "6.1.*",
@@ -109,6 +110,14 @@
         "symfony/web-profiler-bundle": "6.1.*"
     },
     "repositories": {
+        "survos_base_bundle": {
+            "type": "path",
+            "url": "/home/tac/survos/bundles/BaseBundle"
+        },
+        "survos_ux_chart": {
+            "type": "path",
+            "url": "/home/tac/survos/bundles/ux-chartjs"
+        },
         "survos_maker": {
             "type": "path",
             "url": "/home/tac/survos/bundles/maker-bundle"
