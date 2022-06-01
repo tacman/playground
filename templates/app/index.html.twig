@@ -14,13 +14,20 @@
 
     {{ chart is defined ? render_chart(chart) }}
 
+    {% set _controller = '@tacman/html-prettify-bundle/prettify' %}
+    <div {{ stimulus_controller(_controller) }}>
     <h1>Hello {{ _self }}!!</h1>
+</div>
 
 
+    {% set x %}
     This friendly message is coming from:
     <ul>
         <li>Your controller at <code><a href="{{ '/home/tac/survos/demos/helloApp/src/Controller/AppController.php'|file_link(0) }}">src/Controller/AppController.php</a></code></li>
         <li>Your template at <code><a href="{{ '/home/tac/survos/demos/helloApp/templates/app/index.html.twig'|file_link(0) }}">templates/app/index.html.twig</a></code></li>
     </ul>
+    {% endset %}
+    {{ x }}
+    {{ prettify(x) }}
 </div>
 {% endblock %}

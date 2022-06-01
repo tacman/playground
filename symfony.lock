@@ -229,9 +229,6 @@
     "survos/maker-bundle": {
         "version": "2.1.0"
     },
-    "survos/workflow-helper-bundle": {
-        "version": "2.0.x-dev"
-    },
     "symfony/asset": {
         "version": "v6.1.0"
     },
@@ -611,6 +608,9 @@
         "version": "v6.1.0"
     },
     "tacman/hello-bundle": {
+        "version": "dev-main"
+    },
+    "tacman/html-prettify-bundle": {
         "version": "dev-main"
     },
     "twig/extra-bundle": {

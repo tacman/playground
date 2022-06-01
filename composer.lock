@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cc952a7545c61ebde469a2f2f0273cfb",
+    "content-hash": "cc7f25a9c012a62fa2faa10c862b4aef",
     "packages": [
         {
             "name": "api-platform/core",
@@ -2764,16 +2764,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.13.2",
+            "version": "v4.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "210577fe3cf7badcc5814d99455df46564f3c077"
+                "reference": "34bea19b6e03d8153165d8f30bba4c3be86184c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/210577fe3cf7badcc5814d99455df46564f3c077",
-                "reference": "210577fe3cf7badcc5814d99455df46564f3c077",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/34bea19b6e03d8153165d8f30bba4c3be86184c1",
+                "reference": "34bea19b6e03d8153165d8f30bba4c3be86184c1",
                 "shasum": ""
             },
             "require": {
@@ -2814,9 +2814,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v4.13.2"
+                "source": "https://github.com/nikic/PHP-Parser/tree/v4.14.0"
             },
-            "time": "2021-11-30T19:35:32+00:00"
+            "time": "2022-05-31T20:59:12+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -3789,150 +3789,6 @@
             "keywords": [
                 "generator",
                 "symfony5"
-            ],
-            "transport-options": {
-                "relative": false
-            }
-        },
-        {
-            "name": "survos/maker-bundle",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "/home/tac/survos/bundles/maker-bundle",
-                "reference": "c71a936d50fb81685d2e45bb0884ae33ca43c358"
-            },
-            "require": {
-                "php": ">= 8.0",
-                "symfony/config": ">= 5.4",
-                "symfony/console": "^6.0",
-                "symfony/options-resolver": ">= 5.4",
-                "symfony/process": ">= 5.4",
-                "symfony/string": ">= 5.4",
-                "symfony/workflow": "^6.0",
-                "twig/twig": "^2.0|^3.0"
-            },
-            "require-dev": {
-                "doctrine/doctrine-bundle": "^1.12.3|^2.0",
-                "doctrine/orm": "^2.3",
-                "phpstan/phpstan": "^1.4",
-                "sensio/framework-extra-bundle": "^6.2",
-                "symfony/form": ">= 5.4",
-                "symfony/http-client": "^4.4|^5.0|^6.0",
-                "symfony/maker-bundle": "^1.38",
-                "symfony/phpunit-bridge": "^4.4|^5.0|^6.0",
-                "symfony/polyfill-php80": "^1.16.0",
-                "symfony/process": "^4.4|^5.0|^6.0",
-                "symfony/security-core": "^4.4|^5.0|^6.0",
-                "symfony/security-csrf": "^6.0",
-                "symfony/twig-bundle": ">= 5.4",
-                "symfony/validator": ">= 5.4",
-                "symfony/yaml": "^4.4|^5.0|^6.0"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.1.0"
-                },
-                "symfony": {
-                    "require": "^6.1",
-                    "allow-contrib": "true",
-                    "id": "maker-bundle.survos.com"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Survos\\Bundle\\MakerBundle\\": "src"
-                }
-            },
-            "scripts": {
-                "test": [
-                    "vendor/bin/phpunit"
-                ],
-                "test-ci": [
-                    "vendor/bin/phpunit --coverage-text --coverage-clover=build/coverage.xml coverage"
-                ],
-                "test-coverage": [
-                    "php -d xdebug.mode=coverage vendor/bin/phpunit --coverage-html build/coverage"
-                ],
-                "test-phpstan": [
-                    "vendor/bin/phpstan analyse"
-                ]
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Tac Tacelosky",
-                    "email": "tacman@gmail.com"
-                }
-            ],
-            "description": "Tools to generate controllers and templates for the admin interface",
-            "keywords": [
-                "crud",
-                "generator",
-                "symfony"
-            ],
-            "transport-options": {
-                "relative": false
-            }
-        },
-        {
-            "name": "survos/workflow-helper-bundle",
-            "version": "2.0.x-dev",
-            "dist": {
-                "type": "path",
-                "url": "/home/tac/survos/bundles/WorkflowBundle",
-                "reference": "7768789e7570fc7cd2b341a292d80617bfccc7a7"
-            },
-            "require": {
-                "doctrine/orm": "^2.7|^3.0",
-                "php": ">=8.1",
-                "symfony/console": "^6.1",
-                "symfony/http-kernel": "^6.1",
-                "symfony/messenger": "^6.1",
-                "symfony/process": ">= 5.4",
-                "symfony/workflow": ">= 5.4"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^1.2",
-                "survos/base-bundle": "dev-master",
-                "symfony/config": "^6.1",
-                "symfony/dependency-injection": "^6.1",
-                "symfony/form": "^6.1",
-                "symfony/maker-bundle": "^1.36",
-                "symfony/phpunit-bridge": ">= 5.4",
-                "symfony/twig-bundle": ">= 5.4"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "symfony": {
-                    "require": "^6.1",
-                    "allow-contrib": "true"
-                },
-                "branch-alias": {
-                    "dev-master": "2.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Survos\\WorkflowBundle\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Tac Tacelosky",
-                    "email": "tacman@gmail.com"
-                }
-            ],
-            "description": "Add some tools for using the Symfony Workflow Component",
-            "keywords": [
-                "symfony-ux",
-                "workflow"
             ],
             "transport-options": {
                 "relative": false
@@ -9351,6 +9207,54 @@
             }
         },
         {
+            "name": "tacman/html-prettify-bundle",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "/home/tac/survos/bundles/HtmlPrettifyBundle",
+                "reference": "2165cba219c20f84a57737bb3e49f83b4c80cbd9"
+            },
+            "require": {
+                "php": "^8.1",
+                "symfony/config": "^6.1",
+                "symfony/dependency-injection": "^6.1",
+                "symfony/http-kernel": "^6.1",
+                "twig/twig": "^3.4"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^1.7",
+                "symfony/browser-kit": "^6.1",
+                "symfony/framework-bundle": "^6.1",
+                "symfony/phpunit-bridge": "^6.1",
+                "symfony/twig-bundle": "^6.1",
+                "symfony/var-dumper": "^6.1",
+                "symfony/webpack-encore-bundle": "^1.11"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Tacman\\HtmlPrettifyBundle\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tac Tacelosky",
+                    "email": "tacman@gmail.com"
+                }
+            ],
+            "description": "format HTML",
+            "keywords": [
+                "symfony-ux",
+                "symfony6"
+            ],
+            "transport-options": {
+                "relative": false
+            }
+        },
+        {
             "name": "twig/extra-bundle",
             "version": "v3.4.0",
             "source": {
@@ -9771,6 +9675,90 @@
     ],
     "packages-dev": [
         {
+            "name": "survos/maker-bundle",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "/home/tac/survos/bundles/maker-bundle",
+                "reference": "c71a936d50fb81685d2e45bb0884ae33ca43c358"
+            },
+            "require": {
+                "php": ">= 8.0",
+                "symfony/config": ">= 5.4",
+                "symfony/console": "^6.0",
+                "symfony/options-resolver": ">= 5.4",
+                "symfony/process": ">= 5.4",
+                "symfony/string": ">= 5.4",
+                "symfony/workflow": "^6.0",
+                "twig/twig": "^2.0|^3.0"
+            },
+            "require-dev": {
+                "doctrine/doctrine-bundle": "^1.12.3|^2.0",
+                "doctrine/orm": "^2.3",
+                "phpstan/phpstan": "^1.4",
+                "sensio/framework-extra-bundle": "^6.2",
+                "symfony/form": ">= 5.4",
+                "symfony/http-client": "^4.4|^5.0|^6.0",
+                "symfony/maker-bundle": "^1.38",
+                "symfony/phpunit-bridge": "^4.4|^5.0|^6.0",
+                "symfony/polyfill-php80": "^1.16.0",
+                "symfony/process": "^4.4|^5.0|^6.0",
+                "symfony/security-core": "^4.4|^5.0|^6.0",
+                "symfony/security-csrf": "^6.0",
+                "symfony/twig-bundle": ">= 5.4",
+                "symfony/validator": ">= 5.4",
+                "symfony/yaml": "^4.4|^5.0|^6.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1.0"
+                },
+                "symfony": {
+                    "require": "^6.1",
+                    "allow-contrib": "true",
+                    "id": "maker-bundle.survos.com"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Survos\\Bundle\\MakerBundle\\": "src"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "vendor/bin/phpunit"
+                ],
+                "test-ci": [
+                    "vendor/bin/phpunit --coverage-text --coverage-clover=build/coverage.xml coverage"
+                ],
+                "test-coverage": [
+                    "php -d xdebug.mode=coverage vendor/bin/phpunit --coverage-html build/coverage"
+                ],
+                "test-phpstan": [
+                    "vendor/bin/phpstan analyse"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tac Tacelosky",
+                    "email": "tacman@gmail.com"
+                }
+            ],
+            "description": "Tools to generate controllers and templates for the admin interface",
+            "keywords": [
+                "crud",
+                "generator",
+                "symfony"
+            ],
+            "transport-options": {
+                "relative": false
+            }
+        },
+        {
             "name": "symfony/debug-bundle",
             "version": "v6.1.0",
             "source": {
@@ -9931,9 +9919,9 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "survos/base-bundle": 20,
-        "survos/maker-bundle": 20,
-        "survos/workflow-helper-bundle": 20,
-        "tacman/hello-bundle": 20
+        "tacman/hello-bundle": 20,
+        "tacman/html-prettify-bundle": 20,
+        "survos/maker-bundle": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

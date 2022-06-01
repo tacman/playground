@@ -966,11 +966,6 @@
     error-stack-parser "^2.0.0"
     string-width "^4.2.3"
 
-"@survos/workflow-helper-bundle@file:vendor/survos/workflow-helper-bundle/assets":
-  version "1.0.1"
-  dependencies:
-    sweetalert2 "^11.4.17"
-
 "@symfony/stimulus-bridge@^3.0.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@symfony/stimulus-bridge/-/stimulus-bridge-3.1.0.tgz#fcca15b09af5ed346e9b94f9e5770fd3994287a8"
@@ -1018,6 +1013,11 @@
   version "1.0.1"
   dependencies:
     sweetalert2 "^11.4.17"
+
+"@tacman/html-prettify-bundle@file:vendor/tacman/html-prettify-bundle/assets":
+  version "1.0.1"
+  dependencies:
+    html-prettify "^1.0.7"
 
 "@trysound/sax@0.2.0":
   version "0.2.0"
