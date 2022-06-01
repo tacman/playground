@@ -1,4 +1,23 @@
 {
-    "controllers": [],
+    "controllers": {
+        "@survos/workflow-helper-bundle": {
+            "hello": {
+                "enabled": true,
+                "fetch": "eager"
+            }
+        },
+        "@symfony/ux-chartjs": {
+            "chart": {
+                "enabled": true,
+                "fetch": "eager"
+            }
+        },
+        "@tacman/hello-bundle": {
+            "hello": {
+                "enabled": true,
+                "fetch": "eager"
+            }
+        }
+    },
     "entrypoints": []
 }

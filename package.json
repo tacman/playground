@@ -1,8 +1,12 @@
 {
     "devDependencies": {
         "@hotwired/stimulus": "^3.0.0",
+        "@survos/workflow-helper-bundle": "file:vendor/survos/workflow-helper-bundle/assets",
         "@symfony/stimulus-bridge": "^3.0.0",
+        "@symfony/ux-chartjs": "file:vendor/symfony/ux-chartjs/Resources/assets",
         "@symfony/webpack-encore": "^2.0.0",
+        "@tacman/hello-bundle": "file:vendor/tacman/hello-bundle/assets",
+        "chart.js": "^3.4.1",
         "core-js": "^3.0.0",
         "regenerator-runtime": "^0.13.2",
         "webpack-notifier": "^1.6.0"

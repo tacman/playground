@@ -18,6 +18,7 @@
         "sensio/framework-extra-bundle": "^6.1",
         "survos/base-bundle": "*@dev",
         "survos/maker-bundle": "*@dev",
+        "survos/workflow-helper-bundle": "*@dev",
         "symfony/asset": "6.1.*",
         "symfony/console": "6.1.*",
         "symfony/doctrine-messenger": "6.1.*",
@@ -42,6 +43,7 @@
         "symfony/string": "6.1.*",
         "symfony/translation": "6.1.*",
         "symfony/twig-bundle": "6.1.*",
+        "symfony/ux-chartjs": "^2.1",
         "symfony/validator": "6.1.*",
         "symfony/web-link": "6.1.*",
         "symfony/webapp-meta": "^1.0",
@@ -110,13 +112,13 @@
         "symfony/web-profiler-bundle": "6.1.*"
     },
     "repositories": {
+        "survos_workflow_helper": {
+            "type": "path",
+            "url": "/home/tac/survos/bundles/WorkflowBundle/"
+        },
         "survos_base_bundle": {
             "type": "path",
             "url": "/home/tac/survos/bundles/BaseBundle"
-        },
-        "survos_ux_chart": {
-            "type": "path",
-            "url": "/home/tac/survos/bundles/ux-chartjs"
         },
         "survos_maker": {
             "type": "path",

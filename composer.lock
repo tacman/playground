@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b45345932634d7b17ad1093a44752ab6",
+    "content-hash": "c166a855e0b3aa661f81a4b3cb9ff215",
     "packages": [
         {
             "name": "api-platform/core",
@@ -3873,6 +3873,66 @@
                 "crud",
                 "generator",
                 "symfony"
+            ],
+            "transport-options": {
+                "relative": false
+            }
+        },
+        {
+            "name": "survos/workflow-helper-bundle",
+            "version": "2.0.x-dev",
+            "dist": {
+                "type": "path",
+                "url": "/home/tac/survos/bundles/WorkflowBundle",
+                "reference": "7768789e7570fc7cd2b341a292d80617bfccc7a7"
+            },
+            "require": {
+                "doctrine/orm": "^2.7|^3.0",
+                "php": ">=8.1",
+                "symfony/console": "^6.1",
+                "symfony/http-kernel": "^6.1",
+                "symfony/messenger": "^6.1",
+                "symfony/process": ">= 5.4",
+                "symfony/workflow": ">= 5.4"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^1.2",
+                "survos/base-bundle": "dev-master",
+                "symfony/config": "^6.1",
+                "symfony/dependency-injection": "^6.1",
+                "symfony/form": "^6.1",
+                "symfony/maker-bundle": "^1.36",
+                "symfony/phpunit-bridge": ">= 5.4",
+                "symfony/twig-bundle": ">= 5.4"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "symfony": {
+                    "require": "^6.1",
+                    "allow-contrib": "true"
+                },
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Survos\\WorkflowBundle\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tac Tacelosky",
+                    "email": "tacman@gmail.com"
+                }
+            ],
+            "description": "Add some tools for using the Symfony Workflow Component",
+            "keywords": [
+                "symfony-ux",
+                "workflow"
             ],
             "transport-options": {
                 "relative": false
@@ -8536,6 +8596,90 @@
             "time": "2022-05-13T16:41:52+00:00"
         },
         {
+            "name": "symfony/ux-chartjs",
+            "version": "v2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/ux-chartjs.git",
+                "reference": "8fcb3c362c4d9f641bf20d0acfdc43b1bd7206f7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/ux-chartjs/zipball/8fcb3c362c4d9f641bf20d0acfdc43b1bd7206f7",
+                "reference": "8fcb3c362c4d9f641bf20d0acfdc43b1bd7206f7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "symfony/config": "^4.4.17|^5.0|^6.0",
+                "symfony/dependency-injection": "^4.4.17|^5.0|^6.0",
+                "symfony/http-kernel": "^4.4.17|^5.0|^6.0"
+            },
+            "conflict": {
+                "symfony/flex": "<1.13",
+                "symfony/webpack-encore-bundle": "<1.11"
+            },
+            "require-dev": {
+                "symfony/framework-bundle": "^4.4.17|^5.0|^6.0",
+                "symfony/phpunit-bridge": "^5.2|^6.0",
+                "symfony/twig-bundle": "^4.4.17|^5.0|^6.0",
+                "symfony/var-dumper": "^4.4.17|^5.0|^6.0",
+                "symfony/webpack-encore-bundle": "^1.11"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "thanks": {
+                    "name": "symfony/ux",
+                    "url": "https://github.com/symfony/ux"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\UX\\Chartjs\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Titouan Galopin",
+                    "email": "galopintitouan@gmail.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Chart.js integration for Symfony",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "symfony-ux"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/ux-chartjs/tree/v2.1.1"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-01-25T15:40:02+00:00"
+        },
+        {
             "name": "symfony/validator",
             "version": "v6.1.0",
             "source": {
@@ -9164,7 +9308,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/tac/survos/bundles/TacmanHelloBundle",
-                "reference": "8df2b169b553d39cd1da8716b9cd8b546277530e"
+                "reference": "5934820ef9f7a888657248937887b7ed1bc579b4"
             },
             "require": {
                 "php": "^8.1",
@@ -9198,6 +9342,10 @@
                 }
             ],
             "description": "Say hello, using twig and stimulus",
+            "keywords": [
+                "symfony-ux",
+                "symfony6"
+            ],
             "transport-options": {
                 "relative": false
             }
@@ -9784,6 +9932,7 @@
     "stability-flags": {
         "survos/base-bundle": 20,
         "survos/maker-bundle": 20,
+        "survos/workflow-helper-bundle": 20,
         "tacman/hello-bundle": 20
     },
     "prefer-stable": true,

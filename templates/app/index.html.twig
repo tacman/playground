@@ -9,12 +9,12 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <h1>Hello ✅</h1>
 
-    <h1>Hello!!</h1>
 
-    {{ render_hello() }}
-    {{ render_hello()|raw }}
+    {{ chart is defined ? render_chart(chart) }}
+
+    <h1>Hello {{ _self }}!!</h1>
 
 
     This friendly message is coming from:
