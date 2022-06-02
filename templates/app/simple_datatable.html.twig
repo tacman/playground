@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AppController!{% endblock %}
+
+{% block body %}
+        <h3>Stimulus</h3>
+        {% set _controller = 'simple_datatable' %}
+        <div {{ stimulus_controller(_controller, {
+                url: '/demo.json'
+        }) }}>
+                <table class="table" {{ stimulus_target(_controller, 'table') }}>
+                </table>
+        </div>
+
+{% endblock %}

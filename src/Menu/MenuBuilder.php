@@ -9,12 +9,10 @@ use Knp\Menu\ItemInterface;
 
 class MenuBuilder
 {
-    private $factory;
-
     /**
      * Add any other dependency you need...
      */
-    public function __construct(FactoryInterface $factory)
+    public function __construct(private FactoryInterface $factory)
     {
         $this->factory = $factory;
     }
@@ -24,7 +22,11 @@ class MenuBuilder
         $menu = $this->factory->createItem('root');
 
         $menu->addChild('Home', ['route' => 'app_homepage']);
-        $menu->addChild('Charts', ['route' => 'app_chart']);
+        $pageMenu = $menu->addChild('Pages', []);
+        $pageMenu->addChild('Charts', ['route' => 'app_chart']);
+        $pageMenu->addChild('Landing', ['route' => 'app_landing']);
+        $menu->addChild('Tabler', ['route' => 'app_tabler']);
+
         // ... add more children
 
         return $menu;

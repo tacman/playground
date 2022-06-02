@@ -1,3 +1,7 @@
+@import "~@tabler/core";
+
+@import '~simple-datatables/dist/style.css';
+
 body {
     background-color: lightgray;
 }
