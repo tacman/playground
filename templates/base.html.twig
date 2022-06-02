@@ -14,10 +14,12 @@
         {% endblock %}
     </head>
     <body>
+
+    {% apply prettify({msg: 'main menu'}) %}
         {{ knp_menu_render('main') }}
-        <textarea cols="80" rows="15">
-        {{ knp_menu_render('main') }}
-        </textarea>
+    {% endapply %}
+
+    {{ knp_menu_render('main') }}
         {% block body %}{% endblock %}
     </body>
 </html>

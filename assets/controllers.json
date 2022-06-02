@@ -13,7 +13,7 @@
             }
         },
         "@tacman/html-prettify-bundle": {
-            "prettyify": {
+            "prettify": {
                 "enabled": true,
                 "fetch": "eager"
             }

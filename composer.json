@@ -106,7 +106,7 @@
         }
     },
     "require-dev": {
-        "survos/maker-bundle": "*@dev",
+        "roave/security-advisories": "dev-latest",
         "symfony/debug-bundle": "6.1.*",
         "symfony/maker-bundle": "^1.0",
         "symfony/stopwatch": "6.1.*",
@@ -124,10 +124,6 @@
         "survos_base_bundle": {
             "type": "path",
             "url": "/home/tac/survos/bundles/BaseBundle"
-        },
-        "survos_maker": {
-            "type": "path",
-            "url": "/home/tac/survos/bundles/maker-bundle"
         },
         "tacman_hello": {
             "type": "path",

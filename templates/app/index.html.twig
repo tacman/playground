@@ -3,31 +3,55 @@
 {% block title %}Hello AppController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <style>
+        .example-wrapper {
+            margin: 1em auto;
+            max-width: 800px;
+            width: 95%;
+            font: 18px/1.5 sans-serif;
+        }
 
-<div class="example-wrapper">
-    <h1>Hello ✅</h1>
+        .example-wrapper code {
+            background: #F5F5F5;
+            padding: 2px 6px;
+        }
+    </style>
+
+    <div class="example-wrapper">
+        <h1>Hello ✅</h1>
+
+{#        {{ chart is defined ? render_chart(chart) }}#}
+
+        <h3>Prettify PHP</h3>
+
+        {{ knp_menu_render('main')|prettify }}
+
+{#        <h3>Stimulus</h3>#}
+{#        {% set _controller = '@tacman/html-prettify-bundle/prettify' %}#}
+{#        <div {{ stimulus_controller(_controller) }}>#}
+{#            The menu should be clean here!#}
+{#            <div {{ stimulus_target(_controller, 'source') }}>#}
+{#                {{ knp_menu_render('main') }}#}
+{#            </div>#}
+
+{#        </div>#}
 
 
-    {{ chart is defined ? render_chart(chart) }}
+        {% set x %}
+            This friendly message is coming from:
+            <ul>
+                <li>Your controller at <code><a
+                                href="{{ '/home/tac/survos/demos/helloApp/src/Controller/AppController.php'|file_link(0) }}">src/Controller/AppController.php</a></code>
+                </li>
+                <li>Your template at <code><a
+                                href="{{ '/home/tac/survos/demos/helloApp/templates/app/index.html.twig'|file_link(0) }}">templates/app/index.html.twig</a></code>
+                </li>
+            </ul>
+        {% endset %}
+        {{ x }}
+        <pre>
+        {{ prettify(x)|raw }}
 
-    {% set _controller = '@tacman/html-prettify-bundle/prettify' %}
-    <div {{ stimulus_controller(_controller) }}>
-    <h1>Hello {{ _self }}!!</h1>
-</div>
-
-
-    {% set x %}
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/home/tac/survos/demos/helloApp/src/Controller/AppController.php'|file_link(0) }}">src/Controller/AppController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/tac/survos/demos/helloApp/templates/app/index.html.twig'|file_link(0) }}">templates/app/index.html.twig</a></code></li>
-    </ul>
-    {% endset %}
-    {{ x }}
-    {{ prettify(x) }}
-</div>
+        </pre>
+    </div>
 {% endblock %}
