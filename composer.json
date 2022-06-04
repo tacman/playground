@@ -12,12 +12,13 @@
         "doctrine/doctrine-bundle": "^2.6",
         "doctrine/doctrine-migrations-bundle": "^3.2",
         "doctrine/orm": "^2.12",
+        "jordanlev/twig-tree-tag": "*@dev",
         "knplabs/knp-menu-bundle": "^3.2",
         "nelmio/cors-bundle": "^2.2",
         "phpdocumentor/reflection-docblock": "^5.3",
         "phpstan/phpdoc-parser": "^1.5",
         "sensio/framework-extra-bundle": "^6.1",
-        "survos/base-bundle": "*@dev",
+        "survos/maker-bundle": "*@dev",
         "symfony/asset": "6.1.*",
         "symfony/console": "6.1.*",
         "symfony/doctrine-messenger": "6.1.*",
@@ -51,7 +52,7 @@
         "tacman/hello-bundle": "*@dev",
         "tacman/html-prettify-bundle": "*@dev",
         "twig/extra-bundle": "^2.12|^3.0",
-        "twig/twig": "^2.12|^3.0"
+        "twig/twig": "^3.4"
     },
     "config": {
         "allow-plugins": {
@@ -113,6 +114,14 @@
         "symfony/web-profiler-bundle": "6.1.*"
     },
     "repositories": {
+        "survos_maker": {
+            "type": "path",
+            "url": "/home/tac/survos/bundles/maker-bundle"
+        },
+        "tacman_twig_tree": {
+            "type": "path",
+            "url": "/home/tac/survos/bundles/twig-tree-tag/"
+        },
         "html_prettify": {
             "type": "path",
             "url": "/home/tac/survos/bundles/HtmlPrettifyBundle"

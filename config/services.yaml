@@ -30,3 +30,7 @@ services:
             - { name: knp_menu.menu_builder, method: createMainMenu, alias: main } # The alias is what is used to retrieve the menu
 
     # ...
+    twig.tree:
+        class: JordanLev\TwigTreeTag\Twig\Extension\TreeExtension
+        tags:
+            - { name: twig.extension }

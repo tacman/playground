@@ -2,33 +2,126 @@
 {% set debug = options['debug']|default(false) %}
 {% set rootAttributes = options['rootAttributes']|default([]) %}
 
+
+
+{% block root %}
+
+    <nav>
+
+    {% tree item in item.children %}
+        {% if treeloop.first %}
+            <ul>
+{#            <ul class="navbar-nav pt-lg-3">#}
+        {% endif %}
+
+        <li class="nav-item {{ item.hasChildren ? 'dropdown' }}">
+            {{ treeloop.level }}
+            {% if item.hasChildren %}
+
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="true">
+                <span class="nav-link-title">
+                    {{ item.label }}
+                  </span>
+            </a>
+
+            <span class="nav-link-icon d-md-none d-lg-inline-block">
+                <!-- Download SVG icon from http://tabler-icons.io/i/package -->
+            </span>
+
+{#            <a class="nav-link dropdown-toggle' }}"#}
+{#               data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="false"#}
+{#            >#}
+{#                <span class="nav-link-title">#}
+{#                {{ item.name }}#}
+{#                  </span>#}
+{#                #}{#                {{ block('label') }}#}
+{#            </a>#}
+
+                {% else %}
+                    <a class="nav-link" href="{{ item.uri }}">
+                    <span class="nav-link-title">
+                    DIRECT {{ item.label }}
+                  </span>
+        </a>
+
+                {% endif %}
+
+
+            <div class="dropdown-menu">
+                <div class="dropdown-menu-columns">
+                    <div class="dropdown-menu-column">
+                        {% subtree item.children %}
+                    </div>
+                </div>
+            </div>
+        </li>
+        {% if treeloop.last %}</ul>{% endif %}
+    {% endtree %}
+    </nav>
+{% endblock %}
+
 {% block label %}
     <span class="nav-link-title">
                 {{ item.name }}
                   </span>
 {% endblock %}
 
-{% block root %}
-{#<ul>{{ options|keys|join('</li><li>')|raw }}</ul>#}
-{#    {{ dump(options) }}#}
-        {% set listAttributes = options.rootAttributes|default([]) %}
-        {{ block('list') -}}
+{% block xxroot %}
+    {% apply prettify %}
+        <ul class="navbar-nav pt-lg-3">
+            {% for item in item.children %}
+                {#  headers and direct links #}
+                <li class="nav-item">
+                    {{ block('label') }}
+
+                    {% if item.hasChildren %}
+                        {{ block('children') }}
+                    {% endif %}
+                </li>
+
+            {% endfor %}
+        </ul>
+
+    {% endapply %}
+
+    {#    <ul>{{ options|keys|join('</li><li>')|raw }}</ul> #}
+    {#    {% set listAttributes = item.childrenAttributes %} #}
+    {#    {{ block('list') -}} #}
 {% endblock %}
 
-{#     {% block list %}#}
+    {# {% block list %} #}
+    {#    #}
+    {#    {% if item.hasChildren and options.depth is not same as(0) and item.displayChildren %} #}
+    {#        {% import _self as knp_menu %} #}
+    {#        <ul{{ knp_menu.attributes(listAttributes) }}> #}
+    {#            {{ block('children') }} #}
+    {#        </ul> #}
+    {#    {% endif %} #}
 
-{#        {% if item.hasChildren and options.depth is not same as(0) and item.displayChildren %}#}
-{#            {% import _self as knp_menu %}#}
-{#            <ul{{ knp_menu.attributes(listAttributes) }}>#}
-{#                {{ block('children') }}#}
-{#            </ul>#}
-{#        {% endif %}#}
+    {# {% endblock %} #}
+    {# {% block list %} #}
+    {#    {% set depth = depth is defined ? depth + 1 : 0 %} #}
+    {#    {% if item.hasChildren and options.depth is not same as(0) and item.displayChildren %} #}
+    {#        {% import "knp_menu.html.twig" as macros %} #}
 
-{#     {% endblock %}#}
+    {#        {% if matcher.isAncestor(item) %} #}
+    {#            {%- set listAttributes = listAttributes|merge({class: (listAttributes.class|default(''))|trim}) -%} #}
+    {#        {% endif %} #}
+    {#        {% if item.isRoot %} #}
+    {#            {%- set listAttributes = item.isRoot #}
+    {#                ? rootAttributes #}
+    {#                : (listAttributes|merge({class: (listAttributes.class|default('') ~ ' nav-treeviewXX')})) #}
+    {#                |trim -%} #}
+    {#        {% endif %} #}
+    {#        <ul{{ macros.attributes(listAttributes) }}> #}
+    {#            {{ block('children') }} #}
+    {#        </ul> #}
+    {#        {% set depth = depth - 1 %} #}
+    {#    {% endif %} #}
+    {# {% endblock %} #}
 
     {% block linkElement %}{% import _self as knp_menu %}
-        {{ item.linkAttributes|keys|join(',') }}
-        <a {{  options.linkAttributes|length  }} href="{{ item.uri }}"{{ knp_menu.attributes(item.linkAttributes|length  ? item.linkAttributes : options.linkAttributes) }}>{{ block('label') }}</a>{% endblock %}
+        <a href="{{ item.uri }}"{{ knp_menu.attributes(item.linkAttributes) }}>{{ block('label') }}</a>{% endblock %}
 
     {# {% block linkElement %} #}
     {#    {% import "knp_menu.html.twig" as macros %} #}

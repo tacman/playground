@@ -20,7 +20,7 @@ class AppController extends AbstractController
     #[Route('/tabler', name: 'app_tabler')]
     public function tabler(): Response
     {
-        return $this->render('app/tabler.html.twig', [
+        return $this->render('app/demo.html.twig', [
         ]);
     }
 

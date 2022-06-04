@@ -40,6 +40,10 @@ export default class extends Controller {
                     console.log(e);
                 })
 
+                datatable.on("datatable.sort", function(col, direction) {
+                    console.log(col, direction);
+                })
+
                 datatable.on("datatable.update", function(e) {
                     // console.log(e);
                 })
@@ -48,33 +52,30 @@ export default class extends Controller {
                     console.log(e);
                 })
 
-                console.log('adding click listener');
-                datatable.wrapper.addEventListener("click", e => {
-                    const t = e.target.closest("a")
-                    console.warn(t.innerHTML);
-
-
-
-
-                    if (t && (t.nodeName.toLowerCase() === "a")) {
-                        const i = this.headings.indexOf(t.parentNode);
-                        if (t.hasAttribute("data-page")) {
-                            console.log(t);
-                            this.page(t.getAttribute("data-page"))
-                            e.preventDefault()
-                        } else if (
-                            // options.sortable &&
-                            t.classList.contains("dataTable-sorter") &&
-                            t.parentNode.getAttribute("data-sortable") != "false"
-                        ) {
-                            console.log(i, t.parentNode);
-
-                            this.columns().sort(this.headings.indexOf(t.parentNode))
-                            e.preventDefault()
-                        }
-                    }
-                }, false)
-
+                // console.log('adding click listener');
+                // datatable.wrapper.addEventListener("click", e => {
+                //     const t = e.target.closest("a")
+                //
+                //
+                //     if (0)
+                //     if (t && (t.nodeName.toLowerCase() === "a")) {
+                //         const i = this.headings.indexOf(t.parentNode);
+                //         if (t.hasAttribute("data-page")) {
+                //             console.log(t);
+                //             this.page(t.getAttribute("data-page"))
+                //             e.preventDefault()
+                //         } else if (
+                //             // options.sortable &&
+                //             t.classList.contains("dataTable-sorter") &&
+                //             t.parentNode.getAttribute("data-sortable") != "false"
+                //         ) {
+                //             console.log(i, t.parentNode);
+                //             this.columns().sort(this.headings.indexOf(t.parentNode))
+                //             e.preventDefault()
+                //         }
+                //     }
+                // }, false)
+                //
 
 
             });

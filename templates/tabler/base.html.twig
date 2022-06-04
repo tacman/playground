@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel="icon"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+    {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('tabler') }}
+    {% endblock %}
+
+    {% block javascripts %}
+        {{ encore_entry_script_tags('tabler') }}
+    {% endblock %}
+</head>
+{% block body_tag %}<body>{% endblock %}
+{% block body_content %}{% endblock %}
+
+{#        #}{##}{#        {{ knp_menu_render('main') }} #}
+{#        {% apply prettify({msg: 'main menu'}) %} #}
+{#    {% endapply %} #}
+
+{#    {{ knp_menu_render('main') }} #}
+{#{% set menu = knp_menu_get('main') %}#}
+{#{% set menu = knp_menu_render(menu, {#}
+{#    'rootAttributes': {class: 'navbar-nav pt-lg-3'},#}
+{#    'currentClass': 'active',#}
+{#    'leaf_class': 'nav_item',#}
+{#    'branch_class': 'nav_item dropdown',#}
+{#    'span_class': 'nav-link-title',#}
+{#    'childrenAttributes': {#}
+
+{#    },#}
+{#    'template': 'tabler/knp_menu.html.twig'})|prettify() %}#}
+
+{#{% block sidebar %}#}
+
+{#    <div class="collapse navbar-collapse">#}
+
+{#        {{ menu|raw }}#}
+{#        {{ include('app/_nav_example.html.twig') }}#}
+{#    </div>#}
+{#{% endblock %}#}
+
+</body>
+</html>
