@@ -408,10 +408,13 @@
                 <!-- Page title -->
             </div>
             <div class="page-body">
+                <div class="container-xl">
+                    {{ block('body') }}
+                </div>
+
                 <div class="row">
                     <div class="col-md-6">
                         <textarea rows="40" cols="80"> {{ renderedMenu|prettify }}</textarea>
-
                     </div>
                     <div class="col-md-6">
     <textarea rows="40" cols="80">
@@ -419,11 +422,6 @@
                 </textarea>
 
                     </div>
-                </div>
-
-
-                <div class="container-xl">
-            {{ block('body') }}
                 </div>
             </div>
         </div>

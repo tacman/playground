@@ -29,6 +29,7 @@ class AppController extends AbstractController
     public function simple_datatable(): Response
     {
         return $this->render('app/simple_datatable.html.twig', [
+            'csv' => 'https://www.stats.govt.nz/assets/Uploads/Research-and-development-survey/Research-and-development-survey-2021/Download-data/Research-and-development-survey-2021-CSV-notes.csv'
         ]);
     }
 

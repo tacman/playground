@@ -3,6 +3,11 @@
 {% block title %}Hello AppController!{% endblock %}
 
 {% block body %}
+        {{ csvViewer(csv) }}
+
+        bold?
+        {{ bold('test') }}
+
         <h3>Stimulus</h3>
         {% set _controller = 'simple_datatable' %}
         <div {{ stimulus_controller(_controller, {

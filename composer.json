@@ -14,6 +14,7 @@
         "doctrine/orm": "^2.12",
         "jordanlev/twig-tree-tag": "*@dev",
         "knplabs/knp-menu-bundle": "^3.2",
+        "league/csv": "^9.8",
         "nelmio/cors-bundle": "^2.2",
         "phpdocumentor/reflection-docblock": "^5.3",
         "phpstan/phpdoc-parser": "^1.5",
@@ -68,7 +69,8 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "App\\": "src/",
+            "Survos\\FooBundle\\": "lib/FooBundle/src"
         }
     },
     "autoload-dev": {
