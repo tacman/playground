@@ -172,6 +172,9 @@
             "config/packages/sensio_framework_extra.yaml"
         ]
     },
+    "survos/html-prettify-bundle": {
+        "version": "dev-main"
+    },
     "survos/maker-bundle": {
         "version": "2.1.0"
     },

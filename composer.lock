@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cd2198ea470ca1971e16b76a7e646a3b",
+    "content-hash": "b40c46b55017b7593371eb43b26605e8",
     "packages": [
         {
             "name": "api-platform/core",
@@ -1801,7 +1801,7 @@
             "version": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "/home/tac/survos/bundles/twig-tree-tag",
+                "url": "/home/tac/bundles/twig-tree-tag",
                 "reference": "c6076454e9b6fa9202d4ce5ddef0915271569d28"
             },
             "require": {
@@ -1974,16 +1974,16 @@
         },
         {
             "name": "laminas/laminas-code",
-            "version": "4.5.1",
+            "version": "4.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-code.git",
-                "reference": "6fd96d4d913571a2cd056a27b123fa28cb90ac4e"
+                "reference": "da01fb74c08f37e20e7ae49f1e3ee09aa401ebad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-code/zipball/6fd96d4d913571a2cd056a27b123fa28cb90ac4e",
-                "reference": "6fd96d4d913571a2cd056a27b123fa28cb90ac4e",
+                "url": "https://api.github.com/repos/laminas/laminas-code/zipball/da01fb74c08f37e20e7ae49f1e3ee09aa401ebad",
+                "reference": "da01fb74c08f37e20e7ae49f1e3ee09aa401ebad",
                 "shasum": ""
             },
             "require": {
@@ -2036,7 +2036,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2021-12-19T18:06:55+00:00"
+            "time": "2022-06-06T11:26:02+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -2743,39 +2743,88 @@
             "time": "2022-01-14T11:51:13+00:00"
         },
         {
+            "name": "survos/html-prettify-bundle",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "//home/tac/bundles/html-prettify-bundle",
+                "reference": "f6b3d1b6285bcad7e2e166429b8d8eeea8cd7262"
+            },
+            "require": {
+                "gajus/dindent": "^2.0",
+                "php": "^8.1",
+                "symfony/config": "^6.1",
+                "symfony/dependency-injection": "^6.1",
+                "symfony/http-kernel": "^6.1",
+                "twig/twig": "^3.4"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^1.7",
+                "symfony/browser-kit": "^6.1",
+                "symfony/framework-bundle": "^6.1",
+                "symfony/phpunit-bridge": "^6.1",
+                "symfony/twig-bundle": "^6.1",
+                "symfony/var-dumper": "^6.1",
+                "symfony/webpack-encore-bundle": "^1.11"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Tacman\\HtmlPrettifyBundle\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tac Tacelosky",
+                    "email": "tacman@gmail.com"
+                }
+            ],
+            "description": "format HTML",
+            "keywords": [
+                "symfony-ux",
+                "symfony6"
+            ],
+            "transport-options": {
+                "relative": false
+            }
+        },
+        {
             "name": "survos/maker-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "path",
-                "url": "/home/tac/survos/bundles/maker-bundle",
-                "reference": "c71a936d50fb81685d2e45bb0884ae33ca43c358"
+                "url": "/home/tac/bundles/maker-bundle",
+                "reference": "9a402209d1a1021527642270580358a7a074573e"
             },
             "require": {
                 "php": ">= 8.0",
-                "symfony/config": ">= 5.4",
+                "symfony/config": ">= 6.0",
                 "symfony/console": "^6.0",
-                "symfony/options-resolver": ">= 5.4",
-                "symfony/process": ">= 5.4",
-                "symfony/string": ">= 5.4",
+                "symfony/options-resolver": ">= 6.0",
+                "symfony/process": ">= 6.0",
+                "symfony/string": ">= 6.0",
                 "symfony/workflow": "^6.0",
-                "twig/twig": "^2.0|^3.0"
+                "twig/twig": "^3.4"
             },
             "require-dev": {
-                "doctrine/doctrine-bundle": "^1.12.3|^2.0",
+                "doctrine/doctrine-bundle": "^2.0",
                 "doctrine/orm": "^2.3",
                 "phpstan/phpstan": "^1.4",
                 "sensio/framework-extra-bundle": "^6.2",
-                "symfony/form": ">= 5.4",
-                "symfony/http-client": "^4.4|^5.0|^6.0",
+                "symfony/form": ">= 6.0",
+                "symfony/http-client": "^6.0",
                 "symfony/maker-bundle": "^1.38",
-                "symfony/phpunit-bridge": "^4.4|^5.0|^6.0",
+                "symfony/phpunit-bridge": "^6.0",
                 "symfony/polyfill-php80": "^1.16.0",
-                "symfony/process": "^4.4|^5.0|^6.0",
-                "symfony/security-core": "^4.4|^5.0|^6.0",
+                "symfony/process": "^6.0",
+                "symfony/security-core": "^6.0",
                 "symfony/security-csrf": "^6.0",
-                "symfony/twig-bundle": ">= 5.4",
-                "symfony/validator": ">= 5.4",
-                "symfony/yaml": "^4.4|^5.0|^6.0"
+                "symfony/twig-bundle": ">= 6.0",
+                "symfony/validator": ">= 6.0",
+                "symfony/yaml": "^6.0"
             },
             "type": "symfony-bundle",
             "extra": {
@@ -4085,16 +4134,16 @@
         },
         {
             "name": "symfony/flex",
-            "version": "v2.1.8",
+            "version": "v2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/flex.git",
-                "reference": "dcbe58c3fbafeaeb32f619bf94c3912c0c732b65"
+                "reference": "581a978fbcc878a3fef24c9560ac4df3720101a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/flex/zipball/dcbe58c3fbafeaeb32f619bf94c3912c0c732b65",
-                "reference": "dcbe58c3fbafeaeb32f619bf94c3912c0c732b65",
+                "url": "https://api.github.com/repos/symfony/flex/zipball/581a978fbcc878a3fef24c9560ac4df3720101a3",
+                "reference": "581a978fbcc878a3fef24c9560ac4df3720101a3",
                 "shasum": ""
             },
             "require": {
@@ -4130,7 +4179,7 @@
             "description": "Composer plugin for Symfony",
             "support": {
                 "issues": "https://github.com/symfony/flex/issues",
-                "source": "https://github.com/symfony/flex/tree/v2.1.8"
+                "source": "https://github.com/symfony/flex/tree/v2.2.1"
             },
             "funding": [
                 {
@@ -4146,7 +4195,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-05-02T10:23:41+00:00"
+            "time": "2022-06-06T15:53:14+00:00"
         },
         {
             "name": "symfony/form",
@@ -8104,7 +8153,7 @@
             "version": "dev-main",
             "dist": {
                 "type": "path",
-                "url": "/home/tac/survos/bundles/TacmanHelloBundle",
+                "url": "//home/tac/bundles/hello-bundle",
                 "reference": "5934820ef9f7a888657248937887b7ed1bc579b4"
             },
             "require": {
@@ -8112,7 +8161,7 @@
                 "symfony/config": "^6.1",
                 "symfony/dependency-injection": "^6.1",
                 "symfony/http-kernel": "^6.1",
-                "twig/twig": "^2 || ^3.4"
+                "twig/twig": "^3.4"
             },
             "require-dev": {
                 "phpstan/phpstan": "^1.7",
@@ -8139,55 +8188,6 @@
                 }
             ],
             "description": "Say hello, using twig and stimulus",
-            "keywords": [
-                "symfony-ux",
-                "symfony6"
-            ],
-            "transport-options": {
-                "relative": false
-            }
-        },
-        {
-            "name": "tacman/html-prettify-bundle",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "/home/tac/survos/bundles/HtmlPrettifyBundle",
-                "reference": "f6b3d1b6285bcad7e2e166429b8d8eeea8cd7262"
-            },
-            "require": {
-                "gajus/dindent": "^2.0",
-                "php": "^8.1",
-                "symfony/config": "^6.1",
-                "symfony/dependency-injection": "^6.1",
-                "symfony/http-kernel": "^6.1",
-                "twig/twig": "^2 || ^3.4"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^1.7",
-                "symfony/browser-kit": "^6.1",
-                "symfony/framework-bundle": "^6.1",
-                "symfony/phpunit-bridge": "^6.1",
-                "symfony/twig-bundle": "^6.1",
-                "symfony/var-dumper": "^6.1",
-                "symfony/webpack-encore-bundle": "^1.11"
-            },
-            "type": "symfony-bundle",
-            "autoload": {
-                "psr-4": {
-                    "Tacman\\HtmlPrettifyBundle\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Tac Tacelosky",
-                    "email": "tacman@gmail.com"
-                }
-            ],
-            "description": "format HTML",
             "keywords": [
                 "symfony-ux",
                 "symfony6"
@@ -8353,21 +8353,21 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "1.10.0",
+            "version": "1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozarts/assert.git",
-                "reference": "6964c76c7804814a842473e0c8fd15bab0f18e25"
+                "reference": "11cb2199493b2f8a3b53e7f19068fc6aac760991"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozarts/assert/zipball/6964c76c7804814a842473e0c8fd15bab0f18e25",
-                "reference": "6964c76c7804814a842473e0c8fd15bab0f18e25",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/11cb2199493b2f8a3b53e7f19068fc6aac760991",
+                "reference": "11cb2199493b2f8a3b53e7f19068fc6aac760991",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2 || ^8.0",
-                "symfony/polyfill-ctype": "^1.8"
+                "ext-ctype": "*",
+                "php": "^7.2 || ^8.0"
             },
             "conflict": {
                 "phpstan/phpstan": "<0.12.20",
@@ -8405,9 +8405,9 @@
             ],
             "support": {
                 "issues": "https://github.com/webmozarts/assert/issues",
-                "source": "https://github.com/webmozarts/assert/tree/1.10.0"
+                "source": "https://github.com/webmozarts/assert/tree/1.11.0"
             },
-            "time": "2021-03-09T10:59:23+00:00"
+            "time": "2022-06-03T18:03:27+00:00"
         },
         {
             "name": "willdurand/negotiation",
@@ -8529,12 +8529,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "bff7ded3457ec730ad872ebb19cf46a96970e342"
+                "reference": "961eba35293ca2e5b37bc281a63836243b35058a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/bff7ded3457ec730ad872ebb19cf46a96970e342",
-                "reference": "bff7ded3457ec730ad872ebb19cf46a96970e342",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/961eba35293ca2e5b37bc281a63836243b35058a",
+                "reference": "961eba35293ca2e5b37bc281a63836243b35058a",
                 "shasum": ""
             },
             "conflict": {
@@ -8639,7 +8639,7 @@
                 "ezsystems/repository-forms": ">=2.3,<2.3.2.1",
                 "ezyang/htmlpurifier": "<4.1.1",
                 "facade/ignition": "<1.16.15|>=2,<2.4.2|>=2.5,<2.5.2",
-                "facturascripts/facturascripts": "<2022.8",
+                "facturascripts/facturascripts": "<=2022.8",
                 "feehi/cms": "<=2.1.1",
                 "feehi/feehicms": "<=0.1.3",
                 "fenom/fenom": "<=2.12.1",
@@ -8719,7 +8719,7 @@
                 "league/commonmark": "<0.18.3",
                 "league/flysystem": "<1.1.4|>=2,<2.1.1",
                 "lexik/jwt-authentication-bundle": "<2.10.7|>=2.11,<2.11.3",
-                "librenms/librenms": "<22.2.2",
+                "librenms/librenms": "<22.4",
                 "limesurvey/limesurvey": "<3.27.19",
                 "livehelperchat/livehelperchat": "<=3.91",
                 "livewire/livewire": ">2.2.4,<2.2.6",
@@ -8795,7 +8795,7 @@
                 "pimcore/data-hub": "<1.2.4",
                 "pimcore/pimcore": "<10.4",
                 "pocketmine/bedrock-protocol": "<8.0.2",
-                "pocketmine/pocketmine-mp": "<4.2.10",
+                "pocketmine/pocketmine-mp": ">= 4.0.0-BETA5, < 4.4.2|<4.2.10",
                 "pressbooks/pressbooks": "<5.18",
                 "prestashop/autoupgrade": ">=4,<4.10.1",
                 "prestashop/contactform": ">1.0.1,<4.3",
@@ -8840,6 +8840,7 @@
                 "silverstripe/graphql": "<3.5.2|>=4-alpha.1,<4-alpha.2|= 4.0.0-alpha1",
                 "silverstripe/registry": ">=2.1,<2.1.2|>=2.2,<2.2.1",
                 "silverstripe/restfulserver": ">=1,<1.0.9|>=2,<2.0.4",
+                "silverstripe/silverstripe-omnipay": "<2.5.2|>=3,<3.0.2|>=3.1,<3.1.4|>=3.2,<3.2.1",
                 "silverstripe/subsites": ">=2,<2.1.1",
                 "silverstripe/taxonomy": ">=1.3,<1.3.1|>=2,<2.0.1",
                 "silverstripe/userforms": "<3",
@@ -9018,7 +9019,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-06-02T21:04:08+00:00"
+            "time": "2022-06-07T22:04:20+00:00"
         },
         {
             "name": "symfony/debug-bundle",
@@ -9272,9 +9273,9 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "jordanlev/twig-tree-tag": 20,
+        "survos/html-prettify-bundle": 20,
         "survos/maker-bundle": 20,
         "tacman/hello-bundle": 20,
-        "tacman/html-prettify-bundle": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": true,

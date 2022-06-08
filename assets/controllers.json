@@ -1,5 +1,11 @@
 {
     "controllers": {
+        "@survos/html-prettify-bundle": {
+            "prettify": {
+                "enabled": true,
+                "fetch": "eager"
+            }
+        },
         "@symfony/ux-chartjs": {
             "chart": {
                 "enabled": true,
@@ -8,12 +14,6 @@
         },
         "@tacman/hello-bundle": {
             "hello": {
-                "enabled": true,
-                "fetch": "eager"
-            }
-        },
-        "@tacman/html-prettify-bundle": {
-            "prettify": {
                 "enabled": true,
                 "fetch": "eager"
             }

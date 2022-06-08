@@ -17,6 +17,7 @@
         "phpdocumentor/reflection-docblock": "^5.3",
         "phpstan/phpdoc-parser": "^1.5",
         "sensio/framework-extra-bundle": "^6.1",
+        "survos/html-prettify-bundle": "*@dev",
         "survos/maker-bundle": "*@dev",
         "symfony/asset": "6.1.*",
         "symfony/console": "6.1.*",
@@ -49,7 +50,6 @@
         "symfony/webpack-encore-bundle": "^1.12",
         "symfony/yaml": "6.1.*",
         "tacman/hello-bundle": "*@dev",
-        "tacman/html-prettify-bundle": "*@dev",
         "twig/extra-bundle": "^2.12|^3.0",
         "twig/twig": "^3.4"
     },
@@ -116,13 +116,21 @@
         "symfony/web-profiler-bundle": "6.1.*"
     },
     "repositories": {
+        "hello": {
+            "type": "path",
+            "url": "//home/tac/bundles/hello-bundle"
+        },
+        "html-prettify": {
+            "type": "path",
+            "url": "//home/tac/bundles/html-prettify-bundle"
+        },
+        "maker": {
+            "type": "path",
+            "url": "/home/tac/bundles/maker-bundle"
+        },
         "twig-tree-tag": {
             "type": "path",
             "url": "/home/tac/bundles/twig-tree-tag/"
-        },
-        "html_prettify": {
-            "type": "path",
-            "url": "/home/tac/survos/HtmlPrettifyBundle"
         }
     }
 }
