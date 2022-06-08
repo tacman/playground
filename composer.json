@@ -1,7 +1,6 @@
 {
     "type": "project",
     "license": "proprietary",
-    "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
         "php": ">=8.1",
@@ -101,6 +100,9 @@
         "symfony/symfony": "*"
     },
     "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        },
         "symfony": {
             "allow-contrib": "true",
             "require": "6.1.*"
@@ -114,29 +116,13 @@
         "symfony/web-profiler-bundle": "6.1.*"
     },
     "repositories": {
-        "survos_maker": {
+        "twig-tree-tag": {
             "type": "path",
-            "url": "/home/tac/survos/bundles/maker-bundle"
-        },
-        "tacman_twig_tree": {
-            "type": "path",
-            "url": "/home/tac/survos/bundles/twig-tree-tag/"
+            "url": "/home/tac/bundles/twig-tree-tag/"
         },
         "html_prettify": {
             "type": "path",
-            "url": "/home/tac/survos/bundles/HtmlPrettifyBundle"
-        },
-        "survos_workflow_helper": {
-            "type": "path",
-            "url": "/home/tac/survos/bundles/WorkflowBundle/"
-        },
-        "survos_base_bundle": {
-            "type": "path",
-            "url": "/home/tac/survos/bundles/BaseBundle"
-        },
-        "tacman_hello": {
-            "type": "path",
-            "url": "/home/tac/survos/bundles/TacmanHelloBundle"
+            "url": "/home/tac/survos/HtmlPrettifyBundle"
         }
     }
 }
