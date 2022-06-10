@@ -18,6 +18,5 @@ return [
     ApiPlatform\Core\Bridge\Symfony\Bundle\ApiPlatformBundle::class => ['all' => true],
     Knp\Bundle\MenuBundle\KnpMenuBundle::class => ['all' => true],
     Symfony\UX\Chartjs\ChartjsBundle::class => ['all' => true],
-    Tacman\HtmlPrettifyBundle\TacmanHtmlPrettifyBundle::class => ['all' => true],
-    Survos\Bundle\MakerBundle\SurvosMakerBundle::class => ['all' => true],
+    Survos\HtmlPrettifyBundle\HtmlPrettifyBundle::class => ['all' => true],
 ];

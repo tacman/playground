@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b40c46b55017b7593371eb43b26605e8",
+    "content-hash": "37f3ecf238f9e3d0561a415a1d4cd3ec",
     "packages": [
         {
             "name": "api-platform/core",
@@ -1799,10 +1799,16 @@
         {
             "name": "jordanlev/twig-tree-tag",
             "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "/home/tac/bundles/twig-tree-tag",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tacman/twig-tree-tag.git",
                 "reference": "c6076454e9b6fa9202d4ce5ddef0915271569d28"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tacman/twig-tree-tag/zipball/c6076454e9b6fa9202d4ce5ddef0915271569d28",
+                "reference": "c6076454e9b6fa9202d4ce5ddef0915271569d28",
+                "shasum": ""
             },
             "require": {
                 "php": ">= 7.4",
@@ -1811,6 +1817,7 @@
             "require-dev": {
                 "phpstan/phpstan": "^1.6"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -1832,9 +1839,10 @@
             ],
             "description": "A Twig extension for succinctly traversing nested lists (e.g. navigation menus).",
             "homepage": "https://github.com/jordanlev/twig-tree-tag",
-            "transport-options": {
-                "relative": false
-            }
+            "support": {
+                "source": "https://github.com/tacman/twig-tree-tag/tree/master"
+            },
+            "time": "2022-06-03T10:52:54+00:00"
         },
         {
             "name": "knplabs/knp-menu",
@@ -2744,11 +2752,17 @@
         },
         {
             "name": "survos/html-prettify-bundle",
-            "version": "dev-main",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/survos/HtmlPrettifyBundle.git",
+                "reference": "38638292b784128579dd47c7f5f6c92501f00157"
+            },
             "dist": {
-                "type": "path",
-                "url": "//home/tac/bundles/html-prettify-bundle",
-                "reference": "f6b3d1b6285bcad7e2e166429b8d8eeea8cd7262"
+                "type": "zip",
+                "url": "https://api.github.com/repos/survos/HtmlPrettifyBundle/zipball/38638292b784128579dd47c7f5f6c92501f00157",
+                "reference": "38638292b784128579dd47c7f5f6c92501f00157",
+                "shasum": ""
             },
             "require": {
                 "gajus/dindent": "^2.0",
@@ -2756,10 +2770,12 @@
                 "symfony/config": "^6.1",
                 "symfony/dependency-injection": "^6.1",
                 "symfony/http-kernel": "^6.1",
+                "symfony/options-resolver": "^6.1",
                 "twig/twig": "^3.4"
             },
             "require-dev": {
                 "phpstan/phpstan": "^1.7",
+                "roave/security-advisories": "dev-latest",
                 "symfony/browser-kit": "^6.1",
                 "symfony/framework-bundle": "^6.1",
                 "symfony/phpunit-bridge": "^6.1",
@@ -2770,8 +2786,13 @@
             "type": "symfony-bundle",
             "autoload": {
                 "psr-4": {
-                    "Tacman\\HtmlPrettifyBundle\\": "src/"
+                    "Survos\\HtmlPrettifyBundle\\": "src/"
                 }
+            },
+            "scripts": {
+                "phpstan": [
+                    "vendor/bin/phpstan analyse"
+                ]
             },
             "license": [
                 "MIT"
@@ -2787,93 +2808,11 @@
                 "symfony-ux",
                 "symfony6"
             ],
-            "transport-options": {
-                "relative": false
-            }
-        },
-        {
-            "name": "survos/maker-bundle",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "/home/tac/bundles/maker-bundle",
-                "reference": "9a402209d1a1021527642270580358a7a074573e"
+            "support": {
+                "source": "https://github.com/survos/HtmlPrettifyBundle/tree/1.0.2",
+                "issues": "https://github.com/survos/HtmlPrettifyBundle/issues"
             },
-            "require": {
-                "php": ">= 8.0",
-                "symfony/config": ">= 6.0",
-                "symfony/console": "^6.0",
-                "symfony/options-resolver": ">= 6.0",
-                "symfony/process": ">= 6.0",
-                "symfony/string": ">= 6.0",
-                "symfony/workflow": "^6.0",
-                "twig/twig": "^3.4"
-            },
-            "require-dev": {
-                "doctrine/doctrine-bundle": "^2.0",
-                "doctrine/orm": "^2.3",
-                "phpstan/phpstan": "^1.4",
-                "sensio/framework-extra-bundle": "^6.2",
-                "symfony/form": ">= 6.0",
-                "symfony/http-client": "^6.0",
-                "symfony/maker-bundle": "^1.38",
-                "symfony/phpunit-bridge": "^6.0",
-                "symfony/polyfill-php80": "^1.16.0",
-                "symfony/process": "^6.0",
-                "symfony/security-core": "^6.0",
-                "symfony/security-csrf": "^6.0",
-                "symfony/twig-bundle": ">= 6.0",
-                "symfony/validator": ">= 6.0",
-                "symfony/yaml": "^6.0"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.1.0"
-                },
-                "symfony": {
-                    "require": "^6.1",
-                    "allow-contrib": "true",
-                    "id": "maker-bundle.survos.com"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Survos\\Bundle\\MakerBundle\\": "src"
-                }
-            },
-            "scripts": {
-                "test": [
-                    "vendor/bin/phpunit"
-                ],
-                "test-ci": [
-                    "vendor/bin/phpunit --coverage-text --coverage-clover=build/coverage.xml coverage"
-                ],
-                "test-coverage": [
-                    "php -d xdebug.mode=coverage vendor/bin/phpunit --coverage-html build/coverage"
-                ],
-                "test-phpstan": [
-                    "vendor/bin/phpstan analyse"
-                ]
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Tac Tacelosky",
-                    "email": "tacman@gmail.com"
-                }
-            ],
-            "description": "Tools to generate controllers and templates for the admin interface",
-            "keywords": [
-                "crud",
-                "generator",
-                "symfony"
-            ],
-            "transport-options": {
-                "relative": false
-            }
+            "time": "2022-06-09T00:32:05+00:00"
         },
         {
             "name": "symfony/asset",
@@ -7991,90 +7930,6 @@
             "time": "2022-05-03T17:55:32+00:00"
         },
         {
-            "name": "symfony/workflow",
-            "version": "v6.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/workflow.git",
-                "reference": "4b8543521d99fb4cca89b6c550e4b092c049a6bd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/workflow/zipball/4b8543521d99fb4cca89b6c550e4b092c049a6bd",
-                "reference": "4b8543521d99fb4cca89b6c550e4b092c049a6bd",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.1"
-            },
-            "conflict": {
-                "symfony/event-dispatcher": "<5.4"
-            },
-            "require-dev": {
-                "psr/log": "^1|^2|^3",
-                "symfony/dependency-injection": "^5.4|^6.0",
-                "symfony/event-dispatcher": "^5.4|^6.0",
-                "symfony/expression-language": "^5.4|^6.0",
-                "symfony/security-core": "^5.4|^6.0",
-                "symfony/validator": "^5.4|^6.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Workflow\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Grégoire Pineau",
-                    "email": "lyrixx@lyrixx.info"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Provides tools for managing a workflow or finite state machine",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "petrinet",
-                "place",
-                "state",
-                "statemachine",
-                "transition",
-                "workflow"
-            ],
-            "support": {
-                "source": "https://github.com/symfony/workflow/tree/v6.1.0"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2022-05-06T08:47:04+00:00"
-        },
-        {
             "name": "symfony/yaml",
             "version": "v6.1.0",
             "source": {
@@ -8150,11 +8005,17 @@
         },
         {
             "name": "tacman/hello-bundle",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "//home/tac/bundles/hello-bundle",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tacman/TacmanHelloBundle.git",
                 "reference": "5934820ef9f7a888657248937887b7ed1bc579b4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tacman/TacmanHelloBundle/zipball/5934820ef9f7a888657248937887b7ed1bc579b4",
+                "reference": "5934820ef9f7a888657248937887b7ed1bc579b4",
+                "shasum": ""
             },
             "require": {
                 "php": "^8.1",
@@ -8192,9 +8053,11 @@
                 "symfony-ux",
                 "symfony6"
             ],
-            "transport-options": {
-                "relative": false
-            }
+            "support": {
+                "source": "https://github.com/tacman/TacmanHelloBundle/tree/1.0.2",
+                "issues": "https://github.com/tacman/TacmanHelloBundle/issues"
+            },
+            "time": "2022-05-31T15:22:31+00:00"
         },
         {
             "name": "twig/extra-bundle",
@@ -8529,12 +8392,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "961eba35293ca2e5b37bc281a63836243b35058a"
+                "reference": "eb3f283cd897fee03bd8c3557e03b5928fcbda34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/961eba35293ca2e5b37bc281a63836243b35058a",
-                "reference": "961eba35293ca2e5b37bc281a63836243b35058a",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/eb3f283cd897fee03bd8c3557e03b5928fcbda34",
+                "reference": "eb3f283cd897fee03bd8c3557e03b5928fcbda34",
                 "shasum": ""
             },
             "conflict": {
@@ -8711,7 +8574,7 @@
                 "laminas/laminas-http": "<2.14.2",
                 "laravel/fortify": "<1.11.1",
                 "laravel/framework": "<6.20.42|>=7,<7.30.6|>=8,<8.75",
-                "laravel/laravel": "<=5.8.38",
+                "laravel/laravel": "<=9.1.8",
                 "laravel/socialite": ">=1,<1.0.99|>=2,<2.0.10",
                 "latte/latte": "<2.10.8",
                 "lavalite/cms": "<=5.8",
@@ -8753,6 +8616,7 @@
                 "nette/application": ">=2,<2.0.19|>=2.1,<2.1.13|>=2.2,<2.2.10|>=2.3,<2.3.14|>=2.4,<2.4.16|>=3,<3.0.6",
                 "nette/nette": ">=2,<2.0.19|>=2.1,<2.1.13",
                 "nilsteampassnet/teampass": "<=2.1.27.36",
+                "noumo/easyii": "<=0.9",
                 "nukeviet/nukeviet": "<4.3.4",
                 "nystudio107/craft-seomatic": "<3.4.12",
                 "nzo/url-encryptor-bundle": ">=4,<4.3.2|>=5,<5.0.1",
@@ -9019,7 +8883,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-06-07T22:04:20+00:00"
+            "time": "2022-06-08T23:04:00+00:00"
         },
         {
             "name": "symfony/debug-bundle",
@@ -9273,9 +9137,6 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "jordanlev/twig-tree-tag": 20,
-        "survos/html-prettify-bundle": 20,
-        "survos/maker-bundle": 20,
-        "tacman/hello-bundle": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": true,

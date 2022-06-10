@@ -97,12 +97,6 @@
     "friendsofphp/proxy-manager-lts": {
         "version": "v1.0.12"
     },
-    "gajus/dindent": {
-        "version": "2.0.2"
-    },
-    "jordanlev/twig-tree-tag": {
-        "version": "dev-master"
-    },
     "knplabs/knp-menu": {
         "version": "v3.3.0"
     },
@@ -173,10 +167,7 @@
         ]
     },
     "survos/html-prettify-bundle": {
-        "version": "dev-main"
-    },
-    "survos/maker-bundle": {
-        "version": "2.1.0"
+        "version": "1.0.2"
     },
     "symfony/asset": {
         "version": "v6.1.0"
@@ -539,18 +530,6 @@
             "config/packages/webpack_encore.yaml",
             "package.json",
             "webpack.config.js"
-        ]
-    },
-    "symfony/workflow": {
-        "version": "6.1",
-        "recipe": {
-            "repo": "github.com/symfony/recipes",
-            "branch": "main",
-            "version": "3.3",
-            "ref": "3b2f8ca32a07fcb00f899649053943fa3d8bbfb6"
-        },
-        "files": [
-            "config/packages/workflow.yaml"
         ]
     },
     "symfony/yaml": {
