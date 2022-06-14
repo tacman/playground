@@ -1,7 +1,6 @@
 {
     "type": "project",
     "license": "proprietary",
-    "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
         "php": ">=8.1",
@@ -20,7 +19,7 @@
         "phpstan/phpdoc-parser": "^1.5",
         "sensio/framework-extra-bundle": "^6.1",
         "survos/maker-bundle": "*@dev",
-        "survos/survosfoo-bundle": "*@dev",
+        "survos/html-prettify-bundle": "^1.0",
         "symfony/asset": "6.1.*",
         "symfony/console": "6.1.*",
         "symfony/doctrine-messenger": "6.1.*",
@@ -51,8 +50,7 @@
         "symfony/webapp-meta": "^1.0",
         "symfony/webpack-encore-bundle": "^1.12",
         "symfony/yaml": "6.1.*",
-        "tacman/hello-bundle": "*@dev",
-        "tacman/html-prettify-bundle": "*@dev",
+        "tacman/hello-bundle": "*",
         "twig/extra-bundle": "^2.12|^3.0",
         "twig/twig": "^3.4"
     },
@@ -70,8 +68,7 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/",
-            "FooBundle\\": "bundle-dev/foo-bundle"
+            "App\\": "src/"
         }
     },
     "autoload-dev": {
@@ -98,12 +95,16 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
-        ]
+        ],
+        "phpstan": "vendor/bin/phpstan analyse"
     },
     "conflict": {
         "symfony/symfony": "*"
     },
     "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        },
         "symfony": {
             "allow-contrib": "true",
             "require": "6.1.*"
@@ -117,10 +118,6 @@
         "symfony/web-profiler-bundle": "6.1.*"
     },
     "repositories": {
-        "survos_foo": {
-            "type": "path",
-            "url": "lib/FooBundle"
-        },
         "survos_maker": {
             "type": "path",
             "url": "/home/tac/survos/bundles/maker-bundle"
@@ -133,17 +130,17 @@
             "type": "path",
             "url": "/home/tac/survos/bundles/HtmlPrettifyBundle"
         },
-        "survos_workflow_helper": {
-            "type": "path",
-            "url": "/home/tac/survos/bundles/WorkflowBundle/"
-        },
-        "survos_base_bundle": {
-            "type": "path",
-            "url": "/home/tac/survos/bundles/BaseBundle"
-        },
         "tacman_hello": {
-            "type": "path",
-            "url": "/home/tac/survos/bundles/TacmanHelloBundle"
+            "type": "vcs",
+            "url": "git@github.com:tacman/TacmanHelloBundle.git"
+        },
+        "tacman_html_prettify": {
+            "type": "vcs",
+            "url": "git@github.com:survos/HtmlPrettifyBundle.git"
+        },
+        "tacman_twig_tag": {
+            "type": "vcs",
+            "url": "git@github.com:tacman/twig-tree-tag.git"
         }
     }
 }
