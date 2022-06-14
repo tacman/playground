@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2172845225f1591747c46faacd87fa66",
+    "content-hash": "93ee00be6f3ca20f14afb5fdc1b90cce",
     "packages": [
         {
             "name": "api-platform/core",
@@ -2832,7 +2832,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/tac/survos/bundles/maker-bundle",
-                "reference": "c71a936d50fb81685d2e45bb0884ae33ca43c358"
+                "reference": "6fc242a593e47aae0b266a7f59b726668f22015e"
             },
             "require": {
                 "php": ">= 8.0",
@@ -2908,6 +2908,54 @@
             ],
             "transport-options": {
                 "relative": false
+            }
+        },
+        {
+            "name": "survos/survosfoo-bundle",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "lib/FooBundle",
+                "reference": "b567b831ed35d4e5e2dbff31e4dc564ae992e779"
+            },
+            "require": {
+                "php": "^8.1",
+                "symfony/config": "^6.1",
+                "symfony/dependency-injection": "^6.1",
+                "symfony/http-kernel": "^6.1",
+                "twig/twig": "^2 || ^3.4"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^1.7",
+                "symfony/browser-kit": "^6.1",
+                "symfony/framework-bundle": "^6.1",
+                "symfony/phpunit-bridge": "^6.1",
+                "symfony/twig-bundle": "^6.1",
+                "symfony/var-dumper": "^6.1",
+                "symfony/webpack-encore-bundle": "^1.11"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Survos\\FooBundle\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tac Tacelosky",
+                    "email": "tacman@gmail.com"
+                }
+            ],
+            "description": "Say hello, using twig and stimulus",
+            "keywords": [
+                "symfony-ux",
+                "symfony6"
+            ],
+            "transport-options": {
+                "relative": true
             }
         },
         {
@@ -9357,6 +9405,7 @@
     "stability-flags": {
         "jordanlev/twig-tree-tag": 20,
         "survos/maker-bundle": 20,
+        "survos/survosfoo-bundle": 20,
         "tacman/hello-bundle": 20,
         "tacman/html-prettify-bundle": 20,
         "roave/security-advisories": 20
